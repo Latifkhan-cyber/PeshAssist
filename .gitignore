@@ -1,27 +1,88 @@
+# ==========================================
+# PeshAssist Monorepo .gitignore
+# ==========================================
+
 # Dependencies
 node_modules/
+**/node_modules/
 .pnp
 .pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
 
-# Production builds
+# Build outputs
 dist/
+**/dist/
+dist-ssr/
 build/
+**/build/
+out/
+.output/
+storybook-static/
+
+# Vercel & Deployment artifacts
+.vercel/
+.serverless/
 
 # Environment variables & secrets
 .env
+**/.env
 .env.local
+**/.env.local
 .env.development.local
+**/.env.development.local
 .env.test.local
+**/.env.test.local
 .env.production.local
+**/.env.production.local
+*.env.local
 
-# Logs
+# Preserve example environment templates
+!.env.example
+!**/.env.example
+
+# Logs & Diagnostics
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-*.log
+pnpm-debug.log*
+lerna-debug.log*
 
-# Editor & OS files
+# Testing & Code Coverage
+coverage/
+.nyc_output/
+
+# Caches & Temp files
+.cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+temp/
+tmp/
+
+# Operating System files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
-.vscode/
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Editor & IDE configurations
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
