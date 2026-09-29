@@ -1,0 +1,20 @@
+{
+  "name": "peshass-monorepo",
+  "version": "1.0.0",
+  "description": "PeshAssist — AI Peshawar Local Guide & Discovery",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "peshawar",
+    "ai",
+    "gemini",
+    "react",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC"
+}
